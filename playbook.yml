@@ -1,0 +1,9 @@
+---
+- name: Home k8s cluster
+  hosts: nodes
+  become: true
+  tasks:
+    - name: Update packages
+      community.general.pacman:
+        update_cache: true
+        upgrade: true
